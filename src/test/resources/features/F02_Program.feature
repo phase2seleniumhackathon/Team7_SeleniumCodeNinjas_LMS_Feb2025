@@ -1,25 +1,24 @@
+Feature: Program page functionality
 
-@tag
-Feature: Title of your feature
-  I want to use this template for my feature file
-
-  @tag1
-  Scenario: Title of your scenario
-    Given I want to write a step with precondition
-    And some other precondition
-    When I complete action
-    And some other action
-    And yet another action
-    Then I validate the outcomes
-    And check more outcomes
-
-  @tag2
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
-
-    Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+@ProgramPage1
+  Scenario: Verify that Admin is able to navigate to Program page
+    Given Admin is on home page after Login
+    When Admin clicks "Program" on the navigation bar
+    Then Admin should be navigated to Program page
+    
+    
+ @ProgramPage2
+  Scenario: Verify Logout displayed in menu bar
+    Given Admin is on home page after Login
+    When Admin clicks "Program" on the navigation bar
+    Then Admin should see Logout in menu bar.
+    
+    
+ @ProgramPage3
+  Scenario: Verify heading in menu bar
+    Given Admin is on home page after Login
+    When Admin clicks "Program" on the navigation bar
+    Then Admin should see the heading "LMS - Learning Management System"
+    
+ @ProgramPage4
+ 
