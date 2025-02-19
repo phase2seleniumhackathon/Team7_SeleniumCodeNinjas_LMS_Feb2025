@@ -20,5 +20,3 @@ Feature: Program page functionality
     When Admin clicks "Program" on the navigation bar
     Then Admin should see the heading "LMS - Learning Management System"
     
- @ProgramPage4
- 
