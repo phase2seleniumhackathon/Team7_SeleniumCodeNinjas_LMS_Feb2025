@@ -64,6 +64,6 @@ public class Hooks {
 	@After
 	public static void after() throws Throwable {
 		LoggerLoad.info("Closing Driver");
-	//	driverfactory.quitDriver();
+		driverfactory.quitDriver();
 	}
 }

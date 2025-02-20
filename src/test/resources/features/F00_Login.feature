@@ -6,21 +6,20 @@ Feature: Login Page Veification
     #Then Admin should land on the login page
     #
     
-    #@TestScenario_Login_00
-    #Scenario: Verify Admin is able to land on login page
-    #Given The browser is open
-    #When Admin gives the correct LMS portal URL
-    #Then Admin should land on the login page
-    #
-    #@TestScenario_Login_18
-    #Scenario:  Validate login with valid data in all field
-    #Given Admin is on login Page
-    #When Admin enter valid data in all field and clicks login button 
-    #Then Admin should land on home page 
+    @TestScenario_Login_00
+    Scenario: Verify Admin is able to land on login page
+    Given The browser is open
+    When Admin gives the correct LMS portal URL
+    Then Admin should land on the login page
     
+    @TestScenario_Login_01
+    Scenario:  Validate login with valid data in all field
+    Given Admin is on login Page
+    When Admin enter valid data in all field and clicks login button 
+    Then Admin should land on home page 
+    
+    @TestScenario_Login_02
     Scenario Outline: Validate login with invalid credentials
-    #@TestScenario_Login_19
-    Scenario:  Validate login with invalid data
     Given Admin is on login Page
     When Admin enter invalid "<Sheet>" "<TestCase>" credentials and clicks login button 
     Then Error message please "<Sheet>" "<TestCase>" check Adminname/password
@@ -29,6 +28,7 @@ Feature: Login Page Veification
     |login| LP01 |
     |login| LP02 |
     |login| LP03 |
+    
     #When Admin enter invalid data and clicks login button 
     #Then Error message "Invalid username and password Please try again"
     
