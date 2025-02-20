@@ -38,7 +38,25 @@ public class ConfigReader {
 			throw new RuntimeException("url not specified in the Configuration.properties file.");
 	}
 	
-	
+	// UserName
+    public static String userName()
+    {    	
+    	 String loginUserName=properties.getProperty("username");
+    	 if (loginUserName != null)
+		    return loginUserName;
+    	 else 
+    		 throw new RuntimeException("Username not specified in the Config.properties file");
+    }
+    
+    // Password
+    public static String passWord()
+    {    	
+    	 String loginPassword=properties.getProperty("password");
+    	 if (loginPassword != null)
+		    return loginPassword;
+    	 else 
+    		 throw new RuntimeException("Password not specified in the Config.properties file");
+    }
 	
 	public static String getBrowserType() {
 		String browser = properties.getProperty("browser");

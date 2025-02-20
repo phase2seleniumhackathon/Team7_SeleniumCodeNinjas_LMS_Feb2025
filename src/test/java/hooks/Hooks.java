@@ -43,7 +43,7 @@ public class Hooks {
 			LoggerLoad.info("Testing on browser declared in the testng XML file which is "+browser);
 			driverfactory.webdriverinitialize(browser);
 			driver = driverfactory.getDriver();
-			driver.get(ConfigReader.getApplicationUrl("applicationurl"));
+		    driver.get(ConfigReader.getApplicationUrl("applicationurl"));
 			LoggerLoad.info("Initializing driver for the browser : "+ browser);
 		}
 	
@@ -64,6 +64,6 @@ public class Hooks {
 	@After
 	public static void after() throws Throwable {
 		LoggerLoad.info("Closing Driver");
-		driverfactory.quitDriver();
+	//	driverfactory.quitDriver();
 	}
 }
