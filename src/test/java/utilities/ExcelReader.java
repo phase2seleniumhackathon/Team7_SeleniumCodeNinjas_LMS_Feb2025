@@ -73,7 +73,7 @@ public class ExcelReader {
 		public String getTestData(String sheetName, String testCase,String Entry) throws IOException {
             XSSFWorkbook wb;
             String cellValue = "";
-            File file = new File("src/test/resources/TestData/Team15-TestData.xlsx"); // Update path if necessary
+            File file = new File("src/test/resources/TestData/Team7-TestData.xlsx"); // Update path if necessary
 
             FileInputStream fis = new FileInputStream(file); // obtaining bytes from the file
             wb = new XSSFWorkbook(fis); // creating Workbook instance that refers to .xlsx file
