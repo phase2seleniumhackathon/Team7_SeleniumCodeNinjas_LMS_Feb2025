@@ -28,8 +28,7 @@ public class Hooks {
 	public void before() throws Throwable {
 						
 		String browser = Reporter.getCurrentTestResult() == null ? null : Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browser");	
-		if (browser==null) {
-			
+		
 			driverfactory = new DriverFactory();
 			browser =ConfigReader.getBrowserType();
 			LoggerLoad.info("Testing on browser declared in the config file which is "+browser);
@@ -37,15 +36,6 @@ public class Hooks {
 			driver = driverfactory.getDriver();
 			driver.get(ConfigReader.getApplicationUrl("applicationurl"));
 			LoggerLoad.info("Initializing driver for : "+ browser);
-		}
-		else {
-			driverfactory = new DriverFactory();
-			LoggerLoad.info("Testing on browser declared in the testng XML file which is "+browser);
-			driverfactory.webdriverinitialize(browser);
-			driver = driverfactory.getDriver();
-		    driver.get(ConfigReader.getApplicationUrl("applicationurl"));
-			LoggerLoad.info("Initializing driver for the browser : "+ browser);
-		}
 	
 	}
 	

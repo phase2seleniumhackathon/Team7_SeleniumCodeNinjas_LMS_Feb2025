@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class ConfigReader {
     // Define the path to the config.properties file
-    private static String propertyFilePath = "src/test/resources/Config/config.properties";
+    private static String propertyFilePath = "src/test/resources/TestData/config.properties";
 
     // Properties object to store the configuration
     private static Properties properties;
@@ -28,7 +28,7 @@ public class ConfigReader {
         }
     }
 
-    //Method to retrieve dsalgo base url
+    //Method to retrieve LMS base url
 	public static String getApplicationUrl(String key) {
 		String url = properties.getProperty(key);
 		System.out.println(url);
@@ -86,6 +86,17 @@ public class ConfigReader {
             throw new RuntimeException(pagename + " url not specified in the Configuration.properties file.");
     }
 	
+    //HomePageURL
+    
+    public static String HomePageURL()
+    {    	
+    	 String HomePageURL=properties.getProperty("homepageurl");
+    	 if (HomePageURL != null)
+		    return HomePageURL;
+    	 else 
+    		 throw new RuntimeException("Username not specified in the Config.properties file");
+    }
+
 
 }
 
