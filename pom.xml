@@ -3,6 +3,21 @@
   <groupId>Team7SeleniumCodeNinjas</groupId>
   <artifactId>Team7SeleniumCodeNinjas</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<includes>
+						<include>/TestRunner.java</include>
+					</includes>
+					</configuration>
+			</plugin>
+		</plugins>
+	</build>
   
   <!-- Cucumber dependencies -->
   <dependencies>
@@ -56,28 +71,29 @@
       <artifactId>log4j-api</artifactId>
       <version>2.20.0</version>
   </dependency>
-  <!-- Extent Reports -->
+   <!-- Extent dependencies -->
+  
   <dependency>
-      <groupId>com.aventstack</groupId>
-      <artifactId>extentreports</artifactId>
-      <version>5.1.2</version>
-  </dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber7-adapter</artifactId>
+			<version>1.14.0</version>
+		</dependency>
   <dependency>
-      <groupId>tech.grasshopper</groupId>
-      <artifactId>extentreports-cucumber7-adapter</artifactId>
-      <version>1.13.0</version>
-  </dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.1.2</version>
+		</dependency>
   <!-- Allure dependencies -->
   <dependency>
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-testng</artifactId>
       <version>2.29.0</version>
   </dependency>
-  <dependency>
+ <!-- <dependency>
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-cucumber7-jvm</artifactId>
       <version>2.29.0</version>
-  </dependency>
+  </dependency>-->
   <!-- Apache POI (for Excel) -->
   <dependency>
       <groupId>org.apache.poi</groupId>
@@ -89,6 +105,33 @@
       <artifactId>poi-ooxml</artifactId>
       <version>5.2.3</version>
   </dependency>
+  
+  <dependency>
+    <groupId>de.niklasfi.aocr</groupId>
+    <artifactId>aocr</artifactId>
+    <version>2.4</version>
+</dependency>
+
+	<!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+<dependency>
+    <groupId>net.sourceforge.tess4j</groupId>
+    <artifactId>tess4j</artifactId>
+    <version>5.10.0</version>
+</dependency>
+
+
+		<dependency>
+  <groupId>com.aventstack</groupId>
+  <artifactId>chaintest-cucumber-jvm</artifactId>
+  <version>1.0.4</version>
+  <scope>provided</scope>
+</dependency>
+
+<dependency>
+          <groupId>org.freemarker</groupId>
+          <artifactId>freemarker</artifactId>
+          <version>2.3.33</version>
+    </dependency>
 
 </dependencies>
 

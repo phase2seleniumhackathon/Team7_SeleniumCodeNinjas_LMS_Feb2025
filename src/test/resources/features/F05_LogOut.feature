@@ -1,24 +1,14 @@
-@tag
-Feature: Title of your feature
-  I want to use this template for my feature file
+Feature: Validation on Logout button
 
-  @tag1
-  Scenario: Title of your scenario
-    Given I want to write a step with precondition
-    And some other precondition
-    When I complete action
-    And some other action
-    And yet another action
-    Then I validate the outcomes
-    And check more outcomes
+Scenario: Verify logout function
 
-  @tag2
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
+Given Admin is on homepage
+When Admin clicks on the logout in the menu bar
+Then Admin should be redirected to login page
 
-    Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+Scenario: Verify back button function 
+
+Given Admin is on loginpage
+When Admin is in login page and clicks the back button
+Then Admin should receive error message
+
