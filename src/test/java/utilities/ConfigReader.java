@@ -28,7 +28,7 @@ public class ConfigReader {
         }
     }
 
-    //Method to retrieve LMS base url
+    //Method to retrieve dsalgo base url
 	public static String getApplicationUrl(String key) {
 		String url = properties.getProperty(key);
 		System.out.println(url);
@@ -57,7 +57,35 @@ public class ConfigReader {
     	 else 
     		 throw new RuntimeException("Password not specified in the Config.properties file");
     }
-	
+    public static String getProgName() {
+    	String prgName = properties.getProperty("programName");
+		return prgName;
+    	
+    }
+    public static String getBatchName() {
+    	String batchName = properties.getProperty("batchName");
+		return batchName;    	
+    }
+    public static  String getBatchDesc() {
+    	String bDesc = properties.getProperty("batchDesc");
+		return bDesc;    	
+    }
+    public static String getNoOfClasses() {
+    	String noOfClasses = properties.getProperty("NoOfClasses");
+    	return noOfClasses;
+    }
+    public static String getBatchStatus() {
+    	String status = properties.getProperty("batchStatus");
+    	return status;
+    }
+    public static String getEditBatchDesc() {
+    	String desc = properties.getProperty("editBatchDescription");
+    	return desc;
+    }
+    public static String getEditBatchClasses() {
+    	String classes = properties.getProperty("editBatchNoOfClasses");
+    	return classes;
+    }
 	public static String getBrowserType() {
 		String browser = properties.getProperty("browser");
 		System.out.println("Get property BrowserType");
@@ -66,9 +94,6 @@ public class ConfigReader {
 		else
 			throw new RuntimeException("browser not specified in the Configuration.properties file.");
 	}
-	
-
-	
 	public static String getexcelfilepath() {
         String excelfilelpath = properties.getProperty("excelFilePath");
         if (excelfilelpath != null)
@@ -85,8 +110,7 @@ public class ConfigReader {
         else
             throw new RuntimeException(pagename + " url not specified in the Configuration.properties file.");
     }
-	
-    //HomePageURL
+ //HomePageURL
     
     public static String HomePageURL()
     {    	
@@ -96,7 +120,7 @@ public class ConfigReader {
     	 else 
     		 throw new RuntimeException("Username not specified in the Config.properties file");
     }
-
+	
 
 }
 
