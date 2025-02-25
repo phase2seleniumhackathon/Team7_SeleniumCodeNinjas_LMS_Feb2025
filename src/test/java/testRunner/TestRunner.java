@@ -6,8 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 //"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 //"com.aventstack.chaintest.plugins.ChainTestCucumberListener:"
 @CucumberOptions(
-	plugin = {"pretty", "html:target/dsalgoBDD.html","json:target/cucumber-reports/Cucumber.json",
-			"html:target/cucumber-reports/dsalgo.html",
+	plugin = {"pretty", "html:target/LMS.html","json:target/cucumber-reports/Cucumber.json",
+			"html:target/cucumber-reports/lms.html",
 			"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 			"com.aventstack.chaintest.plugins.ChainTestCucumberListener:",
 			}, //reporting purpose
